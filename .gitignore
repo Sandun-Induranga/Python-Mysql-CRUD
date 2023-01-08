@@ -1,5 +1,2 @@
 # created by virtualenv automatically
-*
-bin
-lib
-include
+venv
