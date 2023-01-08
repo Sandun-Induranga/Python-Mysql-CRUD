@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Python Mysql CRUD</title>
+{% extends 'base.html' %}
+{% block title %} List Data {% endblock %}
+{% block header %} All Customers {% endblock %}
 
-    {# CSS For Bootstrap #}
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+{% block body %}
+<div>
+{% for id, name, address, salary in customers %}
 
-    {# Icons #}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <p>{{ id }}</p>
+    <p>{{ name }}</p>
+    <p>{{ address }}</p>
+    <p>{{ salary }}</p>
 
-</head>
-<body>
-
-<nav class="navbar bg-light d-flex justify-content-center">
-    <div class="container-fluid">
-        <h1 class="" style="text-align: center"> Manage Customers </h1>
-    </div>
-</nav>
-
-{# JS For Bootstrap #}
-<script src="../assets/js/bootstrap.min.js"></script>
-
-</body>
-</html>
+{% endfor %}
+</div>
+{% endblock %}
