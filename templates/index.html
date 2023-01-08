@@ -3,14 +3,30 @@
 {% block header %} All Customers {% endblock %}
 
 {% block body %}
-<div>
-{% for id, name, address, salary in customers %}
 
-    <p>{{ id }}</p>
-    <p>{{ name }}</p>
-    <p>{{ address }}</p>
-    <p>{{ salary }}</p>
+    <table class="table">
+        <thead class="bg-primary text-white">
+        <tr>
+            <th scope="col">Customer ID</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Option</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for id, name, address, salary in customers %}
 
-{% endfor %}
-</div>
+            <tr>
+                <td>{{ id }}</td>
+                <td>{{ name }}</td>
+                <td>{{ address }}</td>
+                <td>{{ salary }}</td>
+            <td><i class="bi bi-pen-fill"></i><i class="bi bi-trash3"></i></td>
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+
 {% endblock %}
