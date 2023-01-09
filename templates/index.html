@@ -4,7 +4,13 @@
 
 {% block body %}
 
-    <table class="table">
+    <section class="mt-2 mb-4">
+        <button class="btn btn-success">Save Customer</button>
+        <button class="btn btn-warning">Update Customer</button>
+        <button class="btn btn-danger">Delete Customer</button>
+    </section>
+
+    <table class="table" style="width: 70vw">
         <thead class="bg-primary text-white">
         <tr>
             <th scope="col">Customer ID</th>
@@ -22,7 +28,7 @@
                 <td>{{ name }}</td>
                 <td>{{ address }}</td>
                 <td>{{ salary }}</td>
-            <td><i class="bi bi-pen-fill"></i><i class="bi bi-trash3"></i></td>
+                <td><i class="bi bi-pen-fill me-2"></i><i class="bi bi-trash3 me-2"></i></td>
             </tr>
 
         {% endfor %}
