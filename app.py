@@ -21,7 +21,17 @@ def index():
     for customerId in cursor:
         print(customerId)
     # return render_template('index.html', query)
-
+    
+    
+@app.route('/savecustomer', methods=['get', 'post'])
+def savecustomer():
+    id = request.form['cusId']
+    name = request.form['cusName']
+    address = request.form['address']
+    salary = request.form['salary']
+    print(id)
+    return render_template('index.html', customers=cursor)
+    
 
 if __name__ == '__main__':
     app.run()
