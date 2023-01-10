@@ -4,24 +4,26 @@
 
 {% block body %}
 
-    <section class="row">
-        <div class="col-3">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                   aria-describedby="addon-wrapping">
-        </div>
-        <div class="col-3">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                   aria-describedby="addon-wrapping">
-        </div>
-        <div class="col-3">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                   aria-describedby="addon-wrapping">
-        </div>
-        <div class="col-3">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                   aria-describedby="addon-wrapping">
-        </div>
-    </section>
+    <form id="customerForm" action="{{ url_for('index') }}">
+        <section class="row">
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                       aria-describedby="addon-wrapping">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                       aria-describedby="addon-wrapping">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                       aria-describedby="addon-wrapping">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                       aria-describedby="addon-wrapping">
+            </div>
+        </section>
+    </form>
 
     <section class="mt-2 mb-4">
         <button class="btn btn-success">Save Customer</button>
