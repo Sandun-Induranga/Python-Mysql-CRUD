@@ -26,6 +26,11 @@ def savecustomer():
     name = request.form['cusName']
     address = request.form['address']
     salary = request.form['salary']
+
+    query = 'INSERT INTO Customer VALUES (%s, %s, %s, %s)'
+    values = (id, name, address, salary)
+    cursor.execute(query, values)
+
     return redirect(url_for('index'))
 
 
