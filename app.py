@@ -36,6 +36,15 @@ def savecustomer():
 
 @app.route('/update_customer', methods=['get', 'post'])
 def update_customer():
+    id = request.form['cusId']
+    name = request.form['cusName']
+    address = request.form['address']
+    salary = request.form['salary']
+
+    query = 'UPDATE Customer SET customerName=%s, address=%s, salary=%s WHERE customerId=%s'
+    values = (name, address, salary, id)
+    cursor.execute(query, values)
+
     return redirect(url_for('index'))
 
 
