@@ -28,7 +28,7 @@
     <section class="mt-2 mb-4">
         <button form="customerForm" formmethod="post" formaction="{{ url_for('savecustomer') }}" class="btn btn-success">Save Customer</button>
         <button form="customerForm" formmethod="post" formaction="{{ url_for('update_customer') }}" class="btn btn-warning">Update Customer</button>
-        <button class="btn btn-danger">Delete Customer</button>
+        <button form="customerForm" formmethod="post" formaction="{{ url_for('delete_customer') }}" class="btn btn-danger">Delete Customer</button>
     </section>
 
     <table class="table" style="width: 70vw">
