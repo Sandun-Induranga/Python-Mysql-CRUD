@@ -26,8 +26,8 @@
     </form>
 
     <section class="mt-2 mb-4">
-        <button class="btn btn-success">Save Customer</button>
-        <button class="btn btn-warning">Update Customer</button>
+        <button form="customerForm" formmethod="post" formaction="{{ url_for('savecustomer') }}" class="btn btn-success">Save Customer</button>
+        <button form="customerForm" formmethod="post" formaction="{{ url_for('update_customer') }}" class="btn btn-warning">Update Customer</button>
         <button class="btn btn-danger">Delete Customer</button>
     </section>
 
