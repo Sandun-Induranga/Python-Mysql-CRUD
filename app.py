@@ -34,5 +34,10 @@ def savecustomer():
     return redirect(url_for('index'))
 
 
+@app.route('/update_customer', methods=['get', 'post'])
+def update_customer():
+    return redirect(url_for('index'))
+
+
 if __name__ == '__main__':
     app.run()
