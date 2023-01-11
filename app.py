@@ -48,5 +48,15 @@ def update_customer():
     return redirect(url_for('index'))
 
 
+@app.route('/delete_customer', methods=['get', 'post'])
+def delete_customer():
+    id = request.form['cusId']
+
+    query = 'DELETE FROM Customer WHERE customerId=\''+id+'\''
+    cursor.execute(query)
+
+    return redirect(url_for('index'))
+
+
 if __name__ == '__main__':
     app.run()
