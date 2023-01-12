@@ -3,6 +3,7 @@ Python Mysql CRUD Using Flask Framework
 
 
 **Technologies**
+<br>
   *Python*
   <br>
   *MySQL*
